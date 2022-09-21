@@ -1,0 +1,74 @@
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Patient Registration form</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" href="css/bootstrap-custom.css">
+		<link rel="stylesheet" href="css/registration-form.css">
+        <script src="script.js"></script>
+		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600' rel='stylesheet' type='text/css'>
+		
+	</head>
+	<body>
+		<!-- Register Form -->
+		<div class="form-wrapper"> <!-- Form-wrapper only for positioning -->
+			<form action="#non" method="post" class="fcorn-register container">
+                <h4>Patient Registration Form</h4>
+				<p class="register-info">Note: All fields are required.</p>
+				<div class="row">
+					<p class="col-md-6"><input type="text" placeholder="First Name" required></p>
+					<p class="col-md-6"><input type="text" placeholder="Last Name" required></p>
+				</div>
+				<p>Email of the Patient<input type="email" placeholder="Email Address" required>
+				   <span class="extern-type">We'll keep this private.</span>
+				</p>
+				<p>Home Address<input type="address" placeholder="Address" required>
+				</p>
+				<div class="row">
+					<p class="col-md-4">Date of Birth<input type="date" placeholder="Date (dd)" required></p>
+				</div>
+				<div class="row">
+					<p class="col-md-6 city-wrap"> 
+						<select>
+							<option value="0" selected disabled>City</option>
+							<option value="1">San José</option>
+                            <option value="2">Surabaya</option>
+                            <option value="3">Jakarta</option>
+                            <option value="4">Bandung</option>
+                            <option value="5">Malang</option>
+						</select>
+					</p>
+					<p class="col-md-6 country-wrap">
+						<!-- Add more country name -->
+						<select>
+							<option value="0" selected disabled>Country</option>
+							<option value="1">Indonesia</option>
+							<option value="2">Atlantis</option>
+                            <option value="3">Columbia</option>
+                            <option value="4">Rapture</option>
+                            <option value="5">Mordor</option>
+						</select>
+					</p>
+          <div> 
+            <p class="col-xs-12"><form action="upload.php" method="post" enctype="multipart/form-data">
+            Upload your ID card photo:
+              <input type="file" name="fileToUpload" id="fileToUpload">
+              <input type="submit" value="Upload Image" name="submit" required>
+           </p>
+				</div>
+          <br/>
+				<p class="register-toggle">
+					<label for="register-agree" class="toggle-label" data-on="YES" data-off="NO">
+						<input type="checkbox" id="register-agree" class="toggle-input">
+						<span class="toggle-handle"></span>
+					</label>
+					<span class="info">Do you agree to the <a href="#">terms and conditions?</a></span>
+				</p>
+				<p class="register-submit"><input type="submit" value="Register Now"></p>
+			</form>
+    </div>
+	</body>
+</html>
+
+
